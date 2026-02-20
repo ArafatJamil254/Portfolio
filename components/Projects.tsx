@@ -97,7 +97,7 @@ function TiltCard({ project, index }: { project: any; index: number }) {
                 }}
                 className="absolute inset-0 rounded-2xl border border-white/5 bg-[#1a1a1a]/50"
             >
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
             </motion.div>
 
             <motion.div
@@ -120,11 +120,11 @@ function TiltCard({ project, index }: { project: any; index: number }) {
 
                 <div className="mt-auto flex justify-between items-center relative z-10">
                     <div className="flex gap-4">
-                        <span className="text-[10px] tracking-[0.1em] uppercase font-bold text-white/40 group-hover:text-white transition-colors">
+                        <span className="text-[10px] tracking-[0.1em] uppercase font-bold text-white lg:text-white/40 lg:group-hover:text-white transition-colors">
                             View Details
                         </span>
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 shadow-2xl">
+                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center opacity-100 scale-100 lg:opacity-0 lg:scale-50 lg:group-hover:opacity-100 lg:group-hover:scale-100 transition-all duration-300 shadow-2xl">
                         <ArrowUpRight className="w-5 h-5 text-black" />
                     </div>
                 </div>
@@ -136,7 +136,7 @@ function TiltCard({ project, index }: { project: any; index: number }) {
 export default function Projects() {
     return (
         <div id="work">
-            <section className="relative z-20 bg-[#121212] py-32 px-8 md:px-24 border-t border-white/5">
+            <section className="relative z-20 bg-[#121212] py-24 md:py-32 px-6 sm:px-8 md:px-16 lg:px-24 border-t border-white/5">
                 <div className="max-w-7xl mx-auto">
                     <header className="mb-24">
                         <motion.p

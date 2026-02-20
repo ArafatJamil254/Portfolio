@@ -6,7 +6,7 @@ import { User } from "lucide-react";
 export default function About() {
     return (
         <div id="about">
-            <section className="relative z-20 bg-[#121212] py-32 px-8 md:px-24 border-t border-white/5">
+            <section className="relative z-20 bg-[#121212] py-24 md:py-32 px-6 sm:px-8 md:px-16 lg:px-24 border-t border-white/5">
                 <div className="max-w-5xl mx-auto flex flex-col items-center">
 
                     <motion.div

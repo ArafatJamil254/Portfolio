@@ -75,7 +75,7 @@ export default function Overlay() {
                 {/* Scroll Indicator */}
                 <motion.div
                     style={{ opacity: opacity1 }}
-                    className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+                    className="absolute bottom-24 md:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
                 >
                     <div className="w-[1px] h-16 bg-gradient-to-b from-white/0 via-white/80 to-white/0" />
                     <span className="text-[10px] tracking-[0.4em] uppercase text-white/60 font-medium">

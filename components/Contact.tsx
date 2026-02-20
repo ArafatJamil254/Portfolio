@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 export default function Contact() {
     return (
         <div id="contact">
-            <section className="relative z-20 bg-[#0a0a0a] py-32 px-8 md:px-24 border-t border-white/5 h-[80vh] flex flex-col justify-center">
+            <section className="relative z-20 bg-[#0a0a0a] py-24 md:py-32 px-6 sm:px-8 md:px-16 lg:px-24 border-t border-white/5 min-h-[100svh] lg:h-[80vh] h-auto flex flex-col justify-center">
                 <div className="max-w-7xl mx-auto w-full">
                     <header className="mb-24 text-center">
                         <motion.p

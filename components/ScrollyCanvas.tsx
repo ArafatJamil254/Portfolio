@@ -77,16 +77,32 @@ export default function ScrollyCanvas() {
 
         let drawWidth, drawHeight, offsetX, offsetY;
 
-        if (canvasRatio > imageRatio) {
-            drawWidth = canvasWidth;
-            drawHeight = canvasWidth / imageRatio;
-            offsetX = 0;
-            offsetY = (canvasHeight - drawHeight) / 2;
+        if (window.innerWidth < 768) {
+            // Mobile: Contain scaling to prevent extreme zoom
+            if (canvasRatio > imageRatio) {
+                drawHeight = canvasHeight;
+                drawWidth = canvasHeight * imageRatio;
+                offsetX = (canvasWidth - drawWidth) / 2;
+                offsetY = 0;
+            } else {
+                drawWidth = canvasWidth;
+                drawHeight = canvasWidth / imageRatio;
+                offsetX = 0;
+                offsetY = (canvasHeight - drawHeight) / 2;
+            }
         } else {
-            drawWidth = canvasHeight * imageRatio;
-            drawHeight = canvasHeight;
-            offsetX = (canvasWidth - drawWidth) / 2;
-            offsetY = 0;
+            // Desktop: Cover scaling
+            if (canvasRatio > imageRatio) {
+                drawWidth = canvasWidth;
+                drawHeight = canvasWidth / imageRatio;
+                offsetX = 0;
+                offsetY = (canvasHeight - drawHeight) / 2;
+            } else {
+                drawWidth = canvasHeight * imageRatio;
+                drawHeight = canvasHeight;
+                offsetX = (canvasWidth - drawWidth) / 2;
+                offsetY = 0;
+            }
         }
 
         ctx.clearRect(0, 0, canvasWidth, canvasHeight);
